@@ -1,7 +1,7 @@
 
 html {
-    background-image: url("image/train.jpg");
-    background-repeat: no-repeat;
+	background-image: url("image/train.jpg");
+	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
 	height: 100%;
@@ -9,37 +9,37 @@ html {
 
 h1 {
 	text-align: center;
-    background-color: #a09bf2;
-    font-family: Times New Roman;
-    border: 2px dotted blue;
+	background-color: #a09bf2;
+	font-family: Times New Roman;
+	border: 2px dotted blue;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	padding-left: 15px;
 	padding-right: 15px;
-    width: 250px;
-    margin: auto;
-    margin-bottom: 20px;
+	width: 250px;
+	margin: auto;
+	margin-bottom: 20px;
 }
 
 p {
-    text-align: justify;
+	text-align: justify;
 	background-color: hsl(341, 100%, 85%);
-    font-style: italic;
-    padding: 20px;
-    border: 3px black;
-    border-right-style: dotted;
-    border-left-style: dashed;
+	font-style: italic;
+	padding: 20px;
+	border: 3px black;
+	border-right-style: dotted;
+	border-left-style: dashed;
 	border-top-style: double;
-    border-bottom-style: solid;
-    width: 500px;
+	border-bottom-style: solid;
+	width: 500px;
 	margin:auto;	
 }
 
 body span {
-    font-weight: bold;
+	font-weight: bold;
 	font-style: italic;
-    color: rgb(255, 36, 65, 1);
-    margin: 2px;
-    margin-left: 2px;
-    margin-right: 5px;
+	color: rgb(255, 36, 65, 1);
+	margin: 2px;
+	margin-left: 2px;
+	margin-right: 5px;
 }
