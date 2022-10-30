@@ -1,0 +1,112 @@
+* {
+	box-sizing: border-box;
+	margin:0;
+	padding:0;
+}
+body{
+	background-color: #f4637c;
+	background-image: url("..//images/Screenshot (152).jpg");
+	background-repeat: no-repeat;
+	background-size:100%;
+	margin:0;
+	
+}
+.nav {
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	background-color: #f4637c;
+	position:sticky;
+	font-family: Arial;
+	text-decoration: none;
+	padding: 10px;
+	color: white;
+	width:100%;
+	top:0;
+}
+.nav ul{
+	display:flex;
+	margin: 10px;
+	list-style:none;
+}	
+.nav ul li{
+	font-family: Calibri;
+	padding: 10px;
+	font-size: 25px;
+	
+	
+}
+.nav ul li a{
+	text-decoration: none;
+	color:white;
+	padding:15px;
+	transition:all.5s ease;
+	
+	
+}
+.nav ul li a:hover{
+	background-color:pink;
+	color:white;
+	box-shadow: 0 0 10px white;
+
+}
+h1 {
+	text-align: center;
+	font-size: 60px;
+	color: white;
+	font-family: Calibri;
+	margin-top: 80px;
+	
+	
+}
+p {
+	text-align: center;
+	font-size: 25px;
+	color:white;
+	font-family: Calibri;
+	font-weight:bold;
+	margin-top: 30px;
+	
+}
+
+.navbutton  {
+	text-align: center;
+	text-decoration: none;
+	transition:all.5s ease;
+}
+.navbutton .button1{
+	margin-right: 25px;
+}
+	
+.navbutton ul{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	margin-top:70px;
+	color:black;
+	list-style:none;
+}	
+.navbutton ul li{
+	font-family: Calibri;
+	padding: 15px;
+	font-size: 20px;
+	font-weight: bold;
+	border: 1px solid white;
+	background-color:white;
+}
+.navbutton ul li a{
+	text-decoration: none;
+	color:black;
+	padding:10px;
+	transition:all.5s ease;
+	
+	
+}
+.navbutton ul li a:hover{
+	background-color:pink;
+	color:white;
+	box-shadow: 0 0 10px white;
+
+}
+	
+	
