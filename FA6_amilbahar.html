@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Dy Aliyya-Faith V. Amilbahar">
+
+<style>
+ .linkone:link{
+	background-color:#A0E7E5;
+	text-decoration:none;
+	padding:1px;
+	color:white;
+}
+
+ .linkone:visited{
+	background-color:#B4F8C8;
+	text-decoration:none;
+	padding:1px;
+	color:black;
+}
+
+ .linkone:hover{
+	background-color:#FBE7C6;
+	text-decoration:none;
+	padding:1px;
+	color:black;
+}
+ .linkone:active{
+	background-color:#FFAEBC;
+	text-decoration:none;
+	padding:1px;
+	color:black;
+}
+
+
+ .linktwo:link{
+	background-color: #900020; 
+	text-decoration:none;
+	padding:1px;
+	color:white;
+}
+
+ .linktwo:visited{
+	background-color:#F79489;
+	text-decoration:none;
+	padding:1px;
+	color:black;
+}
+
+ .linktwo:hover{
+	background-color:#F8AFA6;
+	text-decoration:none;
+	padding:1px;
+	color:black;
+}
+ .linktwo:active{
+	background-color:#A49393;
+	text-decoration:none;
+	padding:1px;
+	color:black;
+}
+
+ 
+div{
+	width:80px;
+	height:80px;
+	text-decoration:none;
+	border:solid black 1px;
+
+}
+	
+
+div:target#div1{
+	background-color:#336699;
+	color:#ffcc66;
+}	
+
+
+div:target#div2{	
+	border-style:dotted;
+	border-color:green;
+	border-width: 10px;
+	background-color:#009999;
+	color:#ffcc66;
+
+}
+</style>
+</head>
+<body>
+	
+	<a class="linkone" href="#div1" target="_blank">First Link</a>
+	<a class="linktwo" href="#div2" target="_blank">Second Link</a>
+	<br></br>
+	<div id="div1"> 
+        Div 1 here
+        </div>
+	<br>
+	</br>
+	<div id="div2">
+		Div 2 here
+        </div>
+</body>
