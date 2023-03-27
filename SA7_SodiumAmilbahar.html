@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author"content="Dy Aliyya-Faith V. Amilbahar">
+		<title>Numerology</title>
+		<!-- provide the necessary meta tags -->
+        <style>
+        	body {background: lightblue; 
+            	text-align: center;
+            	font-family: arial;
+                color: navy;
+            }
+            button {padding: 10px; background:violet }
+            span {font-size: 0.5em; color: maroon}
+        </style>
+
+	</head>
+<body>
+	<h1> Your Fortune is in your name </h1>
+	<h2> Your Name is: <span id="thename"> </span></h2>
+    <h2> Today's fortune: <span id="fortune"> </span></h2>
+    
+    <button onclick="yourFortune()"> Click here to enter your name </button>
+ <script>
+ 	function yourFortune() {
+		const name = prompt("Enter your name:");
+		document.getElementById("thename").textContent = name;
+		let sum = 0;
+		
+		for(let i=0; i<name.length; i++) {
+			sum += parseInt(name[i], 36) - 9;
+		}
+		while(sum > 9) {
+			let temp = sum;
+			sum = 0;
+			while(temp > 0) {
+				sum += temp % 10;
+				temp = Math.floor(temp / 10);
+			}
+		}
+		let fortune;
+		switch(sum) {
+			case 0:
+				fortune = "The Goddes of Luck descends upon those who are capable and it is you.";
+				break;
+			case 1:
+				fortune = "If there is no sense of death then the value of life also disappears.";
+				break;
+			case 2:
+				fortune = "You will win your 50/50 today in Genshin Impact.";
+				break;
+			case 3:
+				fortune = "The end of an era, but a beginning of the end. You might want to take care of your life, maybe you'll be transported in another dimension.";
+				break;
+			case 4:
+				fortune = "Take a deep breath and appreciate things, you might find a little surprise for you.";
+				break;
+			case 5:
+				fortune = "Your AO3 tags for today: Angst, Hurt/No Comfort, Unrequited love, Slow burn.";
+				break;
+			case 6:
+				fortune = "Today is the day for you to take the risk and step out of your comfort zone. A chance like this will never passby again.";
+				break;
+			case 7:
+				fortune = "A riddle for you: Find me a flower that is not of this world, and a guide who will never get lost. Find me one who would never lie, as well as a legend that never ends. ";
+				break;
+			case 8:
+				fortune = "You are in pisay. No day is a great day.";
+				break;
+			case 9:
+				fortune = "Your inner peace will be disturbed. Watch out~~ ";
+				break;
+		}
+		document.getElementById("fortune").textContent = fortune;
+	}
+	// hindi ko p alam y ndi po ga gana if maglagay ako space sir:'>
+</script>
+
+   
+    
+</body>
+</html>
