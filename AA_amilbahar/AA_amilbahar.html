@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Sign Up For Free primos in Genshin</title>
+		<meta name="keywords" content="HTML, CSS, JavaScript">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author"content="Dy Aliyya-Faith V. Amilbahar">
+	
+	
+	<!-- low sir, late nanamn aq what eaf wla p deductions maawa ka sir:")) -->
+	
+	<style>
+	
+		*{
+			/* user-select: none; */
+			box-sizing: border-box;
+			font-family:Times New Roman;
+			margin-top: 10px;
+			margin-bottom: 10px;
+		  }
+		  html,body{
+			background-image: url("FRWLk86XMAUplOe.jpg");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			height: 100%;
+			background-attachment: fixed;
+		  }
+		  body{
+			display: grid;
+			place-items: center;
+			text-align: center;
+		  }
+		  .content{
+			width: 700px;
+			padding: 40px 40px;
+			background: #efdfbb;
+			border-radius: 10px;
+			
+		  }
+		  .content .text{
+			font-size: 30px;
+			font-weight: 600;
+			margin-bottom: 25px;
+			color: #454545;
+		  }
+		  .form{
+			height: 50px;
+			width: 100%;
+			display: flex;
+			position: relative;
+			margin-bottom: 15px;
+		  }
+		  .form:nth-child(2){
+			margin-top: 20px;
+		  }
+		  .form input{
+			height: 100%;
+			width: 100%;
+			padding-left: 45px;
+			font-size: 20px;
+			background: #f8f3f1;
+			color: #454545;
+			border-radius: 25px;
+		  }
+		  .form label{
+			display: none;
+		  }
+		  #button input{
+			margin: 15px 10px;
+			width: 40%;
+			height: 50px;
+			margin-bottom: 30px;
+			font-size: 20px;
+			line-height: 50px;
+			font-weight: 600;
+			background: #f8f3f1;
+			border-radius: 25px;
+			border: none;
+			outline: none;
+			cursor: pointer;
+			color: #454545;
+			
+		  }
+		  #button input:focus{
+			color: #f8f3f1;
+			
+		  }
+
+		  select{
+			height: 100%;
+			width: 100%;
+			padding-left: 45px;
+			font-size: 18px;
+			background: #f8f3f1;
+			color: #454545;
+			border-radius: 25px;
+			
+		  }
+
+		  textarea {
+			height: 100%;
+			width: 100%;
+			padding-left: 45px;
+			font-size: 18px;
+			background: #f8f3f1;
+			color: #454545;
+			border-radius: 25px;
+		
+		  }
+		  textarea {
+			height: 100%;
+			width: 100%;
+			padding-left: 45px;
+			font-size: 18px;
+			background: #f8f3f1;
+			color: #454545;
+			border-radius: 25px;
+			padding-top: 20px;
+			margin-top: 10px;
+			
+		  }
+
+		  .comments label{
+			font-size: 20px;
+			font-family: Times New Roman;
+			background: #f8f3f1;
+			color: #454545;
+			text-decoration: bold;
+		  }
+
+		  fieldset {
+			border: none;
+		  }
+
+		  #infoInputted p {
+			font-family:sans-serif;
+			text-align: left;
+			margin: 10px;
+			color: #454545;
+			font-size: 18px;
+		  }
+
+
+	</style>
+    </head>
+    <body>
+		<div class="content">
+
+			<form>
+			<fieldset>
+				<legend class="text">SIGN UP FORM</legend>
+			<!-- User's Name -->
+				  <div class="form"> 
+					  <label for="urName">Name</label>
+					  <input type="text" id="urName" name="urName" onblur="alertGreen(this.value, this.id)" onfocus="alertRed(this.value, this.id)"  placeholder="Full Name" required>
+				  </div>
+   
+			<!-- User's Username -->
+			   <div class="form">
+					  <label for="userName">Username</label>
+					  <input type="text" id="userName" name="userName" onblur="alertGreen(this.value, this.id)" onfocus="alertRed(this.value, this.id)" placeholder="Username" required>
+			   </div>
+   
+			<!-- User's Gender -->  
+			   <div class="form">
+				  <label for="gender">Gender</label>
+				  <select name="gender" id="gender" onblur="alertRed(this.value, this.id)"  oninvalid="this.setCustomValidity('Select your Gender. If you prefer to not mention, plese select last option')", required>
+					 <option value="" disabled selected> Your Gender </option>
+					 <option value="male">Male</option>
+					 <option value="female">Female</option>
+					 <option value="others">I prefer to not mention</option>
+				  </select>
+				</div>
+   
+			
+			<div class="form">
+			   <label for="email">Email</label>
+			   <input type="email" id="email" name="email" onblur="alertGreen(this.value, this.id)" onfocus="alertRed(this.value, this.id)" placeholder="Example: childeThE11tHfATuIhArbInGeR@gmail.com" required>
+			</div>
+			<!-- Passwordd -->
+			   <div class="form">
+				  <label for ="password">Password</label>
+				  <input type="password" id="password" name="password" onblur="alertGreen(this.value, this.id)" onfocus="alertRed(this.value, this.id)" placeholder="Password" required>
+			   </div>
+   
+			<!-- Address -->
+			   <div class="form">
+				  <label for="address">Address</label>
+				  <input type="text" id="address" name="address" onblur="alertGreen(this.value, this.id)" onfocus="alertRed(this.value, this.id)" placeholder="Address" required>
+			   </div>
+   
+			
+			<!-- User's description abt themselves -->
+			<div class="comments">
+			   <label for="comments"> Please do tell us about your interests!!<3</label>
+			   <textarea id="comments" name="comments" rows="2" cols="50" onblur="alertGreen(this.value, this.id)" onfocus="alertRed(this.value, this.id)"required> </textarea>
+			</div>
+   
+			<!-- Sign Up button -->
+			<div id="button">
+			   <input type="reset" onclick="resetButton()">
+			   <input type="submit">
+			</div>
+		    </fieldset>
+
+
+			<fieldset>
+				<legend class="text"> Summarized Personal Information </legend>
+	
+				<div id="infoInputted">
+				<p> <b>Name:</b> <span id="urNamei"> </span> </p>
+				<p> <b>Username:</b> <span id="userNamei"> </span> </p>
+				<p> <b>Gender:</b> <span id="genderi"> </span> </p>
+				<p> <b>Password:</b> <span id="passwordi"> </span> </p>
+				<p> <b>Email:</b> <span id="emaili"> </span> </p>
+				<p> <b>Address:</b> <span id="addressi"> </span> </p>
+				<p> <b>Interests:</b> <span id="commenti"> </span> </p>
+				</div>
+				</fieldset>
+
+			</form>
+   
+			<script>
+				//onfocus
+			   function alertGreen(inputString, id) {
+				if (inputString.trim() == "") {
+				  document.getElementById(id).style.borderColor = "red";
+				 }
+				  else{
+					document.getElementById(id).style.borderColor = "lime";
+				  };
+
+			   }
+
+			   //onblur
+			   function alertRed(inputString, id) {
+				  if (inputString.trim() == "") {
+				  document.getElementById(id).style.borderColor = "red";
+				 }
+				  else{
+					document.getElementById(id).style.borderColor = "lime";
+				  };
+			   }
+
+			   function resetButton() {
+				document.getElementById("urName").style.borderColor = "black";
+				document.getElementById("userName").style.borderColor = "black";
+				document.getElementById("gender").style.borderColor = "black";
+				document.getElementById("email").style.borderColor = "black";
+				document.getElementById("password").style.borderColor = "black";
+				document.getElementById("address").style.borderColor = "black";
+				document.getElementById("comments").style.borderColor = "black";
+				document.getElementById("urNamei").innerHTML = "";
+				document.getElementById("userNamei").innerHTML = "";
+				document.getElementById("genderi").innerHTML = "";
+				document.getElementById("emaili").innerHTML = "";
+				document.getElementById("passwordi").innerHTML = "";
+				document.getElementById("addressi").innerHTML = "";
+				document.getElementById("commenti").innerHTML = "";
+			   }
+
+			   document.querySelector("form").addEventListener("submit", function(event) {
+				event.preventDefault();
+				document.querySelector("#urNamei").textContent = document.querySelector("#urName").value;
+				document.querySelector("#userNamei").textContent = document.querySelector("#userName").value;
+				document.querySelector("#genderi").textContent = document.querySelector("#gender").value;
+				document.querySelector("#emaili").textContent = document.querySelector("#email").value;
+				document.querySelector("#passwordi").textContent = document.querySelector("#password").value;
+				document.querySelector("#addressi").textContent = document.querySelector("#address").value;
+				document.querySelector("#commenti").textContent = document.querySelector("#comments").value;
+			   });
+			</script>
+		 </div>
+    </body>
+</html>
