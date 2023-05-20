@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NCE Reviewer Quiz</title>
+	<style>
+		* {
+			box-sizing: border-box;
+			font-family: Century;
+		}
+
+		html, body {
+			background: linear-gradient(to bottom left, #ffcc99 0%, #ccccff 75%);
+			background-repeat: no-repeat;
+			display: grid;
+		}
+
+		body {
+			place-items: center;
+		}
+
+		fieldset {
+			place-items: center;
+			width: 700px;
+			padding: 40px 40px;
+			background: #ffffcc;
+			border-radius: 25px;
+			margin-bottom: 25px;
+		}
+
+		fieldset input {
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+
+		h1 {
+			text-align: center;
+			font-weight: bold;
+		}
+
+		.outside {
+			margin-bottom: 40px;
+		}
+
+		p {
+			font-size: 20px;
+		}
+
+		img {
+			align-items: center;
+			width: 70%;
+			padding-left: 50px;
+			margin-left: 10%;
+		}
+		#score {
+			position: relative;
+			right: 500px;
+			border: solid;
+			padding: 30px 10px 30px 10px;
+			border-radius: 25px;
+			transform: translate(0px, -50px);
+		}
+		#button,button {
+  			padding-left: 25px;
+  			padding-right: 25px;
+  			place-items: center;
+  			text-align: center;
+  			height: 50px;
+  			margin-bottom: 30px;
+  			font-size: 20px;
+  			line-height: 50px;
+  			font-weight: 600;
+  			background: #ffffcc 50%;
+  			border-radius: 25px;
+  			border: none;
+  			outline: none;
+  			cursor: pointer;
+  			color: black;
+  			transition: background 0.5s;
+		}
+
+		#button:hover, button:hover {
+  			background: #ffcc99;
+		}
+	</style>
+</head>
+<body>
+	<h1>NCE Reviewer Quiz</h1>
+	<h1 id="score">score</h1>
+	<h3 style="width:600px;text-align:center;transform: translate(0px, -100px); content">Instructions: Please answer each question carefully. For 		the multiple-choice questions, choose an answer by clicking on the desired option. For the fill-in-the-blank question, answer in 		singular format, for example, "dog."</h3>
+
+	<form id="quizForm" onsubmit="calculateQuizScore()">
+		<fieldset>
+			<h2>Question 1:</h2>
+			<p>What is the largest organ in the body?</p>
+			<label>
+				<input type="radio" name="q1" value="correct" required> Skin
+			</label><br>
+			<label>
+				<input type="radio" name="q1" value="incorrect"> Gallbladder
+			</label><br>
+			<label>
+				<input type="radio" name="q1" value="incorrect"> Stomach
+			</label><br>
+			<label>
+				<input type="radio" name="q1" value="incorrect"> Liver
+			</label><br><br>
+			<span id="answer1"></span>
+		</fieldset><br><br>
+
+		<fieldset>
+			<h2>Question 2:</h2>
+			<p>Which planet is known as the Red Planet?</p>
+			<label>
+				<input type="radio" name="q2" value="correct" required> Mars
+			</label><br>
+			<label>
+				<input type="radio" name="q2" value="incorrect"> Jupiter
+				</label><br>
+			<label>
+				<input type="radio" name="q2" value="incorrect"> Saturn
+			</label><br>
+			<label>
+				<input type="radio" name="q2" value="incorrect"> Venus
+			</label><br><br>
+			<span id="answer2"></span>
+		</fieldset><br><br>
+
+		<fieldset>
+			<h2>Question 3:</h2>
+			<p>What was the first antibiotic?</p>
+			<label>
+				<input type="radio" name="q3" value="incorrect" required> Streptomysin
+			</label><br>
+			<label>
+				<input type="radio" name="q3" value="correct"> Penicilin
+			</label><br>
+			<label>
+				<input type="radio" name="q3" value="incorrect"> Neomysin
+			</label><br>
+			<label>
+				<input type="radio" name="q3" value="incorrect"> Amoxicillin
+			</label><br><br>
+			<span id="answer3"></span>
+		</fieldset><br><br>
+
+   		<fieldset>
+    			<h2>Question 4:</h2>
+    			<p>Which of the following is NOT an exocrine gland?</p>
+    			<label>
+      				<input type="radio" name="q4" value="incorrect" required> Mammary glands
+    			</label><br>
+    			<label>
+      				<input type="radio" name="q4" value="incorrect"> Ceruminous glands
+    			</label><br>
+    			<label>
+      				<input type="radio" name="q4" value="correct"> Thyroid glands
+    			</label><br>
+    			<label>
+      				<input type="radio" name="q4" value="incorrect"> Meibomian glands
+    			</label><br><br>
+      			<span id="answer4"></span>
+		</fieldset><br><br>
+    
+    		<fieldset>
+    			<h2>Question 5:</h2>
+    			<p>What does DNA stands for?</p>
+    			<label>
+      				<input type="radio" name="q5" value="correct" required> Deoxyribonucleic acid
+    			</label><br>
+    			<label>
+      				<input type="radio" name="q5" value="incorrect"> Dibenzoyl-L-Tartaric Acid
+    			</label><br>
+    			<label>
+      				<input type="radio" name="q5" value="incorrect"> Diformylpiperazine
+    			</label><br>
+    			<label>
+      				<input type="radio" name="q5" value="incorrect"> Diethylene glycol
+    			</label><br><br>
+      			<span id="answer5"></span>
+		</fieldset><br><br>
+
+    		<fieldset>
+    			<h2>Question 6:</h2>
+    			<p>How many bones are present in the body of an adult?</p>
+    			<label>
+      				<input type="radio" name="q6" value="incorrect required"> 214
+    			</label><br>
+    			<label>
+      				<input type="radio" name="q6" value="correct"> 206
+    			</label><br>
+    			<label>
+      				<input type="radio" name="q6" value="incorrect"> 300
+    			</label><br>
+    			<label>
+      				<input type="radio" name="q6" value="incorrect"> 205
+    			</label><br><br>
+      			<span id="answer6"></span>
+    		</fieldset><br><br>
+  
+    		<fieldset>
+    			<h2>Question 7:</h2>
+    			<p>What is the most abundant in the earth's atmospere</p>
+    			<label>
+      				<input type="radio" name="q7" value="correct" required> Nitrogen
+    			</label><br>
+    			<label>
+      				<input type="radio" name="q7" value="incorrect"> Oxygen
+    			</label><br>
+    			<label>
+      				<input type="radio" name="q7" value="incorrect"> Sulfur
+    			</label><br>
+   	 		<label>
+      				<input type="radio" name="q7" value="incorrect"> Carbon
+    			</label><br><br>
+      			<span id="answer7"></span>
+		</fieldset><br><br>
+    
+    		<fieldset>
+    			<h2>Question 8:</h2>
+    			<p>What is the hardest natural substance on earth?</p>
+    			<label>
+      				<input type="radio" name="q8" value="incorrect" required> Graphite
+    			</label><br>
+    			<label>
+      				<input type="radio" name="q8" value="incorrect"> Quartz
+    			</label><br>
+    			<label>
+      				<input type="radio" name="q8" value="correct"> Diamond
+    			</label><br>
+    			<label>
+      				<input type="radio" name="q8" value="incorrect"> Ruby
+    			</label><br><br>
+      			<span id="answer8"></span>
+   		</fieldset><br><br>
+   
+   		<fieldset>
+    			<h2>Question 9:</h2>
+    			<p>What is the heaviest organ of the body?</p>
+    			<label>
+      				<input type="radio" name="q9" value="incorrect" required> Brain
+    			</label><br>
+    			<label>
+      				<input type="radio" name="q9" value="correct"> Liver
+    			</label><br>
+    			<label>
+      				<input type="radio" name="q9" value="incorrect"> Heart
+    			</label><br>
+    			<label>
+      				<input type="radio" name="q9" value="incorrect"> Stomach
+    			</label><br><br>
+      			<span id="answer9"></span>
+    		</fieldset><br><br>
+   
+    		<fieldset>
+    			<h2>Question 10:</h2>
+    			<p>what is the pressure required to stop osmosis?</p>
+    			<label>
+      				<input type="radio" name="q10" value="incorrect" required> Boiling Point Elevation
+    			</label><br>
+    			<label>
+      				<input type="radio" name="q10" value="incorrect"> Vapor pressure lowering
+    			</label><br>
+    			<label>
+      				<input type="radio" name="q10" value="correct"> Osmotic pressure
+    			</label><br>
+    			<label>
+      				<input type="radio" name="q10" value="incorrect"> Freezing Point Depression
+    			</label><br><br>
+      			<span id="answer10"></span>
+    		</fieldset><br><br>
+    
+    		<fieldset>
+    			<h2>Question 11:</h2>
+    			<p>Which blood type is the rarest?</p>
+    			<label>
+      				<input type="radio" name="q11" value="incorrect" required> AB positive
+    			</label><br>
+    			<label>
+      				<input type="radio" name="q11" value="incorrect"> B positive
+    			</label><br>
+    			<label>
+      				<input type="radio" name="q11" value="incorrect"> O negative
+    			</label><br>
+    			<label>
+      				<input type="radio" name="q11" value="correct"> AB negative
+    			</label><br><br>
+      			<span id="answer11"></span>
+		</fieldset><br><br>
+    
+    		<fieldset>
+    			<h2>Question 12:</h2>
+    			<p> what is the movement of solvent molecules through a semipermeable membrane from a pure solvent or a dilute solution 			to a more concentrated solution?</p>
+    			<label>
+      				<input type="radio" name="q12" value="incorrect" required> Electrolytes
+    			</label><br>
+    			<label>
+      				<input type="radio" name="q12" value="correct"> Osmosis
+    			</label><br>
+    			<label>
+      				<input type="radio" name="q12" value="incorrect"> Isotonic
+    			</label><br>
+    			<label>
+      				<input type="radio" name="q12" value="incorrect"> Hypotonic
+    			</label><br><br>
+      			<span id="answer12"></span>
+		</fieldset><br><br>
+    
+    		<fieldset>
+    			<h2>Question 13:</h2>
+    			<p>What layer of the epidermis is the uppermost layer, which consists of dead, keratinized, and cornified 						squamous cells?</p>
+    			<label>
+      				<input type="radio" name="q13" value="correct" required> stratum corneum
+    			</label><br>
+    			<label>
+     				<input type="radio" name="q13" value="incorrect"> stratum lucidum
+    			</label><br>
+    			<label>
+     				<input type="radio" name="q13" value="incorrect"> stratum granulosum
+    			</label><br>
+    			<label>
+   			   	<input type="radio" name="q13" value="incorrect"> stratum basale
+    			</label><br><br>
+       			<span id="answer13"></span>
+		</fieldset><br><br>
+    
+    		<fieldset>
+    			<h2>Question 14:</h2>
+    			<p>What is referred as the body's outer covering and protection from the threats of outside environment.</p>
+    			<label>
+      				<input type="radio" name="q14" value="correct" required> integumentary system
+    			</label><br>
+    			<label>
+      				<input type="radio" name="q14" value="incorrect"> endocrine system
+    			</label><br>
+    			<label>
+      				<input type="radio" name="q14" value="incorrect"> immune system
+    			</label><br>
+    			<label>
+      				<input type="radio" name="q14" value="incorrect"> circulatory system
+    			</label><br><br>
+  			<span id="answer14"></span>
+		</fieldset><br><br>
+    
+    		<fieldset>
+    			<h2>Question 15:</h2>
+    			<p>What type of glands that secretes oil?</p>
+    			<label>
+      				<input type="radio" name="q15" value="correct" required> sebaceous glands
+    			</label><br>
+    			<label>
+      				<input type="radio" name="q15" value="incorrect"> meibomian glands
+    			</label><br>
+    			<label>
+      				<input type="radio" name="q15" value="incorrect"> mammary glands
+    			</label><br>
+    			<label>
+      				<input type="radio" name="q15" value="incorrect"> myosin
+    			</label><br><br>
+  			<span id="answer15"></span>
+		</fieldset><br><br>
+
+
+		<fieldset id="q16Border">
+    			<h2>Question 16:</h2>
+    			<p><p>Fill in the blank: The blood contains __ that fights against harmful bacteria. </p></p>
+    			<input type="text" name="q16" placeholder="Your answer..."  required><br>
+  			<span id="answer16"></span>
+		</fieldset><br>
+
+		<fieldset id="q17Border">
+    			<h2>Question 17:</h2>
+    			<p>Fill in the blank: Animals with backbones are called  __ .</p>
+    			<input type="text" name="q17" placeholder="Your answer..." required><br>
+  			<span id="answer17"></span>
+		</fieldset><br>
+
+		<fieldset id="q18Border">
+    			<h2>Question 18:</h2>
+    			<p>Fill in the blank: __ is the most abundant element in the universe..</p>
+    			<input type="text" name="q18" placeholder="Your answer..." required><br>
+  			<span id="answer18"></span>
+		</fieldset><br>
+
+		<fieldset id="q19Border">
+    			<h2>Question 19:</h2>
+    			<p>Fill in the blank: __ gives plants their green pigment.</p>
+    			<input type="text" name="q19" placeholder="Your answer..." required><br>
+  			<span id="answer19"></span>
+		</fieldset><br>
+
+		<fieldset id="q20Border">
+    			<h2>Question 20:</h2>
+    			<p>Fill in the blank: The removal of excess dead cells from the skin surface is called __.</p>
+    			<input type="text" name="q20" placeholder="Your answer..." required><br>
+  			<span id="answer20"></span>
+		</fieldset><br>
+
+    		<button type="submit">Submit</button>
+    		<button type="reset" onclick="resetPage()">Reset</button>
+  	</form>
+
+	<div>
+		<p>Note: the border will turn green if answer is correct and red if wrong.</p>
+	</div>
+
+	<script>
+		function calculateMultipleChoiceScore() {
+  			var questions = document.getElementsByTagName('fieldset');
+  			var score = 0;
+
+  			for (var i = 0; i < questions.length; i++) {
+    				if (i < 15) { 
+      					var choices = questions[i].getElementsByTagName('input');
+      					var correctChoice = false;
+
+      					for (var j = 0; j < choices.length; j++) {
+        					var choice = choices[j];
+
+        				if (choice.checked && choice.value === 'correct') {
+          					score++;
+          					correctChoice = true;
+          					break; 
+        				}
+      			}
+
+      			if (correctChoice) {
+        			questions[i].style.borderColor = 'green'; // Set border color to green if the correct choice is selected
+      			} 
+			else {
+        			questions[i].style.borderColor = 'red'; // Set border color to red if an incorrect choice is selected
+      			}
+    		  }
+  	    }
+
+   return score;
+}
+
+
+
+	function calculateQuizScore() {
+  		var multipleChoiceScore = calculateMultipleChoiceScore();
+
+  		var fillInBlanksScore = 0;
+  		var fillInBlanksAnswers = {
+    			q16: 'white blood cell',
+    			q17: 'vertebrate',
+    			q18: 'hydrogen',
+    			q19: 'chlorophyll',
+    			q20: 'exfoliation'
+  		};
+
+  		for (var questionId in fillInBlanksAnswers) {
+    			var answer = document.getElementsByName(questionId)[0].value.trim().toLowerCase();
+
+    			if (answer === fillInBlanksAnswers[questionId]) {
+      				fillInBlanksScore++;
+    			}
+  		}
+
+  		var totalScore = multipleChoiceScore + fillInBlanksScore;
+
+  		return {
+    			multipleChoiceScore: multipleChoiceScore,
+    			fillInBlanksScore: fillInBlanksScore,
+    			totalScore: totalScore
+  		};
+	}
+
+	document.getElementById('quizForm').addEventListener('submit', function(event) {
+  		event.preventDefault(); 
+
+  		var scores = calculateQuizScore();
+
+  		var message = 'Congrats on finishing the reviewer!'+'\n'+
+			'Multiple Choice Score: ' + scores.multipleChoiceScore + '\n' +
+               		'Fill in the Blanks Score: ' + scores.fillInBlanksScore + '\n' + 
+                	'Total Score: ' + scores.totalScore;
+
+  		document.getElementById("answer1").innerHTML = "Answer: Skin";
+  		document.getElementById("answer2").innerHTML = "Answer: Mars";
+  		document.getElementById("answer3").innerHTML = "Answer: Penicillin";
+  		document.getElementById("answer4").innerHTML = "Answer: Thyroid glands";
+  		document.getElementById("answer5").innerHTML = "Answer: Deoxyribonucleic acid";
+  		document.getElementById("answer6").innerHTML = "Answer: 206";
+  		document.getElementById("answer7").innerHTML = "Answer: Nitrogen";
+  		document.getElementById("answer8").innerHTML = "Answer: Diamond";
+  		document.getElementById("answer9").innerHTML = "Answer: Liver";
+  		document.getElementById("answer10").innerHTML = "Answer: Osmotic pressure";
+  		document.getElementById("answer11").innerHTML = "Answer: AB negative";
+  		document.getElementById("answer12").innerHTML = "Answer: Osmosis";
+  		document.getElementById("answer13").innerHTML = "Answer: Stratum corneum";
+  		document.getElementById("answer14").innerHTML = "Answer: Integumentary system";
+  		document.getElementById("answer15").innerHTML = "Answer: Sebaceous glands";
+  		document.getElementById("answer16").innerHTML = "Answer: white blood cell"
+  		document.getElementById("answer17").innerHTML = "Answer: vertebrate";
+  		document.getElementById("answer18").innerHTML = "Answer: hydrogen";
+  		document.getElementById("answer19").innerHTML = "Answer: chlorophyll";
+  		document.getElementById("answer20").innerHTML = "Answer: exfoliation";
+  		borderColor();
+
+  		alert(message);
+  		document.getElementById("score").innerHTML = scores.totalScore+"/20";
+ 
+
+	});
+
+	function resetPage(){
+		location.reload()
+	}
+
+	function borderColor(){
+		if (document.getElementsByName("q16")[0].value.trim().toLowerCase() === "white blood cell") {
+    			document.getElementById("q16Border").style.borderColor = "green";
+  		} 
+		else{
+    			document.getElementById("q16Border").style.borderColor = "red";
+  		}
+
+  		if (document.getElementsByName("q17")[0].value.trim().toLowerCase() === "vertebrate") {
+    			document.getElementById("q17Border").style.borderColor = "green";
+  		} 
+		else {
+    			document.getElementById("q17Border").style.borderColor = "red";
+  		}
+
+  		if (document.getElementsByName("q18")[0].value.trim().toLowerCase() === "hydrogen") {
+    			document.getElementById("q18Border").style.borderColor = "green";
+  		} 
+		else {
+    		document.getElementById("q18Border").style.borderColor = "red";
+  		}
+
+  		if (document.getElementsByName("q19")[0].value.trim().toLowerCase() === "chlorophyll") {
+    			document.getElementById("q19Border").style.borderColor = "green";
+  		}
+		else {
+    			document.getElementById("q19Border").style.borderColor = "red";
+  		}
+
+  		if (document.getElementsByName("q20")[0].value.trim().toLowerCase() === "exfoliation") {
+    			document.getElementById("q20Border").style.borderColor = "green";
+  		} 
+		else {
+    		document.getElementById("q20Border").style.borderColor = "red";
+  		}
+	}
+
+</script>
+</body>
+</html>
